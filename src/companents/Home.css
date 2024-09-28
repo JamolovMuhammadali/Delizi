@@ -1,0 +1,449 @@
+/* Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* General animation */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateX(-50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes hoverPop {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+}
+
+/* Italian hero section */
+.home-hero-italian {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.home-hero-italian-left {
+    width: 40%;
+}
+
+.home-hero-italian-right {
+    width: 60%;
+}
+
+.home-hero-italian-right img {
+    width: 100%;
+}
+
+.home-hero-italian-left-restauran-button {
+    background-color: #ffc788;
+    border: none;
+    border-radius: 126px;
+    padding: 10px 25px;
+    color: #FF8A00;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.home-hero-italian-left-restauran-button:hover {
+    background-color: #FF8A00;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.home-hero-italian-left-h1 {
+    font-size: 80px;
+    font-weight: 500;
+    font-family: "Raleway", sans-serif;
+    animation: slideIn 1.2s ease-in-out;
+}
+
+.home-hero-italian-left-p {
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: 400;
+    max-width: 400px;
+    margin-bottom: 20px;
+    animation: fadeIn 1.4s ease-in-out;
+}
+
+.home-hero-italian-left-wrap-btn {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.home-hero-italian-left-wrap-btn button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 162px;
+    color: white;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.home-hero-italian-left-wrap-btn :first-child {
+    background-color: #FF8A00;
+}
+
+.home-hero-italian-left-wrap-btn :first-child:hover {
+    background-color: #D97706;
+    transform: scale(1.05);
+}
+
+.home-hero-italian-left-wrap-btn-sec {
+    background-color: #3FA72F;
+    cursor: pointer;
+}
+
+.home-hero-italian-left-wrap-btn-sec:hover {
+    background-color: #2C8A24;
+    transform: scale(1.05);
+}
+
+/* Welcome section */
+.home-welcome-wrap {
+    width: 100%;
+    background-color: rgb(219, 219, 255);
+}
+
+.home-welcome {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    animation: fadeIn 1.3s ease;
+}
+
+.home-welcome-right {
+    width: 40%;
+}
+
+.home-welcome-left {
+    width: 60%;
+}
+
+.home-welcome-left-img {
+    width: 100%;
+}
+
+.home-welcome-right-h1 {
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.home-welcome-right-h1 span {
+    color: #FF8A00;
+}
+
+.home-welcome-right-p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    color: #5C4529;
+    margin: 40px 0 50px;
+}
+
+.home-welcome-right-button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 126px;
+    background-color: #FF8A00;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.home-welcome-right-button:hover {
+    background-color: darkorange;
+    transform: scale(1.05);
+}
+
+/* Reserve Section */
+.home-reserve {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-reserve-left {
+    width: 60%;
+}
+
+.home-reserve-right {
+    width: 40%;
+    z-index: 2;
+    padding: 0 10px;
+}
+
+.home-reserve-big-rec {
+    width: 882px;
+    height: 882px;
+    border: 1px solid #b6b6b6;
+    border-radius: 50%;
+    position: relative;
+    left: -100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-reserve-small-rec {
+    width: 664px;
+    height: 664px;
+    background-color: hsl(33, 100%, 95%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-reserve-small-rec img {
+    width: 526px;
+    height: 526px;
+    border-radius: 50%;
+}
+
+.home-reserve-left img {
+    transition: transform 0.3s ease;
+}
+
+.home-reserve-left img:hover {
+    transform: rotate(5deg);
+}
+
+.home-reserve-small-rec1 {
+    width: 181px;
+    height: 181px;
+    background-color: hsl(33, 100%, 95%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 508px;
+    top: 170px;
+    z-index: 1;
+}
+
+.home-reserve-small-rec2 {
+    width: 181px;
+    height: 181px;
+    background-color: hsl(33, 100%, 95%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 7px;
+    bottom: 170px;
+    z-index: 1;
+}
+
+/* Chef Section */
+.home-chef {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.home-chef-h1 {
+    font-family: "Tinos", serif;
+    font-weight: 700;
+    font-size: 80px;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.home-chef-wrap-chefs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.home-chef-wrap-chef {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+    animation: fadeIn 1.3s ease;
+}
+
+.home-chef-wrap-chef:hover {
+    transform: translateY(-10px);
+    animation: hoverPop 0.3s ease-in-out;
+}
+
+.home-chef-wrap-chef h3 {
+    color: #311F09;
+    margin: 20px 0;
+}
+
+.home-chef-wrap-chef p {
+    color: #A08D76;
+}
+
+.home-chef-wrap-chef img {
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.home-chef-wrap-chef:hover img {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Open Section */
+.home-open {
+    width: 80%;
+    height: 588px;
+    margin: 0 auto;
+    background-image: url(../assets/HomeOpen2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-bottom: 50px;
+    animation: fadeIn 1.5s ease;
+}
+
+.home-open-words h1 {
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.home-open-words h3 {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.home-open-btns {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.home-open-btn {
+    width: 226px;
+    height: 60px;
+    border-radius: 126px;
+    border: none;
+    background-color: #FF8A00;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.home-open-btn:hover {
+    background-color: darkorange;
+}
+
+/* View all button */
+.view-all-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: orange;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.view-all-button:hover {
+    background-color: darkorange;
+    transform: scale(1.05);
+}
+
+/* Responsive fixes */
+@media (max-width: 1200px) {
+    .home-hero-italian,
+    .home-welcome,
+    .home-chef,
+    .home-open {
+        width: 90%;
+    }
+
+    .home-welcome-right-h1 {
+        font-size: 40px;
+        font-weight: 400;
+    }
+
+    .home-welcome-right-p {
+        font-size: 15px;
+        line-height: normal;
+        margin: 20px 0;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 867px) {
+    .home-hero-italian {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .home-hero-italian-left-h1,
+    .home-open-words h1 {
+        font-size: 60px;
+    }
+
+    .home-chef-h1 {
+        font-size: 60px;
+    }
+
+    .home-chef-wrap-chefs {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 567px) {
+    .home-chef-wrap-chefs {
+        grid-template-columns: 1fr;
+    }
+
+    .home-chef-h1,
+    .home-open-words h1 {
+        font-size: 40px;
+        font-weight: 400;
+    }
+
+    .home-open-words h3 {
+        font-size: 25px;
+        font-weight: 400;
+    }
+
+    .home-open {
+        border-radius: 80px;
+        padding: 20px;
+    }
+
+    .home-open-btns {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 467px) {
+    .home-hero-italian-left-wrap-btn {
+        flex-direction: column;
+    }
+    .home-hero-italian-left-wrap-btn :first-child,
+    .home-hero-italian-left-wrap-btn-sec {
+        width: 100%;
+    }
+}
