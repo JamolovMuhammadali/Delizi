@@ -11,7 +11,8 @@ const Alert = ({ message, showAlert }) => {
         message,
       };
 
-      setAlerts([...alerts, newAlert]);
+      // Update the alerts state with the new alert
+      setAlerts((prevAlerts) => [...prevAlerts, newAlert]);
 
       // Automatically hide the alert after 3 seconds
       const timer = setTimeout(() => {
@@ -20,7 +21,7 @@ const Alert = ({ message, showAlert }) => {
 
       return () => clearTimeout(timer); // Clean up the timer
     }
-  }, [showAlert]);
+  }, [showAlert, message]); // Added 'message' as a dependency
 
   return (
     <div id="alertContainer">
