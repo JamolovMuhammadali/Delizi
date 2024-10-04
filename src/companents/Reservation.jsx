@@ -19,6 +19,7 @@ function Reservation() {
   const [selectedTime, setSelectedTime] = useState('04:30'); // Default time
   const [partySize, setPartySize] = useState('2'); // Default party size
   const [confres, setConfres] = useState(false);
+  const [cancelRes, setCancelRes] = useState(false)
 
   function ReshiddenTr() {
     setReshidden(true); // Open modal
@@ -47,6 +48,30 @@ function Reservation() {
     setConfres(false)
     setReshidden(true); // Close modal
   }
+
+  function ModifyClose() {
+    setReshidden(false);
+    setConfres(false)
+
+  }
+
+  function OpenCalRes() {
+    setCancelRes(true)
+    setReshidden(false);
+    setConfres(false)
+  }
+
+  function CloseCalRes() {
+    setCancelRes(false)
+    setConfres(true)
+  }
+
+  function CancelRes(){
+    setCancelRes(false)
+    setReshidden(false);
+    setConfres(false)
+  }
+
 
   return (
     <div className='wrap-reservation'>
@@ -265,8 +290,8 @@ function Reservation() {
               </div>
 
               <div className="confres-detail-modify-btns">
-                <button className='confres-detail-modify-btns-modify'>Modify <FaEdit /> </button>
-                <button className='confres-detail-modify-btns-cancel' >Cancel <IoMdClose /></button>
+                <button onClick={ModifyClose} className='confres-detail-modify-btns-modify'>Modify <FaEdit /> </button>
+                <button onClick={OpenCalRes} className='confres-detail-modify-btns-cancel' >Cancel <IoMdClose /></button>
 
               </div>
             </div>
@@ -285,12 +310,90 @@ function Reservation() {
                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
                 <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam.</p>
               </div>
+
             </div>
           </div>
 
         </div>
       )}
 
+
+      {cancelRes && (
+        <div className="wrap-calres">
+          <div onClick={CloseCalRes} className="confres-close">
+            <IoMdClose />
+          </div>
+          <div className="calres">
+
+            <div className='header header-confress'>
+              <div className="header-logo">
+                <div className="header-logo-circle">
+                  <p>D</p>
+                </div>
+                <p>Delizi<span className='header-logo-span'>oso</span></p>
+              </div>
+
+              <div className="header-counter-button">
+                <Link className='header-signup' to='/Signup'><button>Sign in</button></Link>
+                <Link to='/Login'><button>Login</button></Link>
+
+                <div className="header-counter-button-rectangles">
+                  <div className="header-counter-button-rectangle"></div>
+                  <div className="header-counter-button-rectangle"></div>
+                  <div className="header-counter-button-rectangle"></div>
+                  <div className="header-counter-button-circle"></div>
+                </div>
+              </div>
+            </div>
+
+            <div className="calres-are">
+              <div className="calres-are-in">
+                <h1>Are you sure you want to cancel the reservation?</h1>
+                <div className="confres-succes-id">
+                  <MdOutlineDateRange />
+                  <p>Booking ID : #123456</p>
+                  <div className="calres-circle"></div>
+                  <div className="calres-circle2"></div>
+                  <div className="calres-circle3"></div>
+                  <div className="calres-circle4"></div>
+
+                </div>
+              </div>
+            </div>
+
+            <div className="calres-wrap-in">
+              <div className="confres-detail-modify-img">
+                <img src={reservationLeftImg} alt="reservationLeftImg" />
+              </div>
+
+              <div className="reservationh-detail confres-detail">
+                <div className="reservationh-detail-date-time">
+                  <h1>Reservation detail</h1>
+                  <div className="reservationh-detail-date-time-date">
+                    <MdOutlineDateRange />
+                    <p>{selectedDate ? selectedDate.toDateString() : 'No date selected'}</p>
+                  </div>
+
+                  <div className="reservationh-detail-date-time-time">
+                    <FaRegClock />
+                    <p>{selectedTime}</p>
+                  </div>
+
+                  <div className="reservationh-detail-date-time-pupil">
+                    <FaRegUser />
+                    <p>Party of {partySize}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="wrap-calres-cancel">
+              <button onClick={CancelRes} className='calres-cancel'>Cancel reservation</button>
+            </div>
+
+          </div>
+        </div>
+      )}
 
 
       <Footer />

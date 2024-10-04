@@ -19,7 +19,20 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
+    gap: 20px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .menu-item {
@@ -27,10 +40,36 @@
     background-color: #f6f6f6;
     text-align: center;
     border-radius: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, color 0.3s ease;
 }
 
-.menu-item img{
+.menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 138, 0, 1);
+    color: white;
+}
+
+/* Change text color when hovering over the card */
+.menu-item:hover h3,
+.menu-item:hover p,
+.menu-item:hover .menu-item-price-btn p {
+    color: white;
+}
+
+.menu-item:hover .menu-item-price-btn button{
+    background-color: #fff;
+    color: #FF8A00;
+}
+
+
+.menu-item img {
     width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover img {
+    transform: scale(1.1);
 }
 
 .menu-item-price-btn {
@@ -48,6 +87,12 @@
     color: #fff;
     cursor: pointer;
     background-color: #FF8A00;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-item-price-btn button:hover {
+    background-color: #FF6A00;
+    transform: scale(1.05);
 }
 
 .menu-item-price-btn p {
@@ -84,30 +129,37 @@
     margin: 0 10px;
     cursor: pointer;
     transition: all 0.5s;
+    transform: translateY(0);
 }
 
 .pagination button:hover {
     background-color: #483319;
+    transform: translateY(-5px);
 }
 
-@media (max-width: 1200px){
-    .menu-list{
+.pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@media (max-width: 1200px) {
+    .menu-list {
         grid-template-columns: 1fr 1fr;
     }
 }
 
-@media (max-width: 867px){
-    .hero-our-h1{
+@media (max-width: 867px) {
+    .hero-our-h1 {
         font-size: 50px;
     }
 }
 
-@media (max-width: 667px){
-    .menu-list{
+@media (max-width: 667px) {
+    .menu-list {
         grid-template-columns: 1fr;
     }
 
-.hero-our-h1 {
-    font-size: 35px;
-}
+    .hero-our-h1 {
+        font-size: 35px;
+    }
 }

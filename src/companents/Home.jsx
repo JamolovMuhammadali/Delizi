@@ -62,10 +62,6 @@ function Home() { // Destructure the prop here
                         <p className='home-welcome-right-p'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis ultricies at eleifend proin. Congue nibh nulla malesuada ultricies nec quam</p>
                         <button className='home-welcome-right-button'>See our menu</button>
                     </div>
-
-                    <div className="home-welcome-h-right">
-                        <img src={HomeWelcome} alt="HomeWelcome" />
-                    </div>
                 </div>
             </div>
 
@@ -125,23 +121,28 @@ function Home() { // Destructure the prop here
                 <h1>Our customers say</h1>
             </div> */}
 
-            <div className="wrap-home-open">
-                <div className="home-open">
-                    <div className="home-open-words">
+            <div class="wrap-home-open">
+                <div class="home-open">
+                    <div class="home-open-words">
                         <h1>we are open from</h1>
-                        <h3>Monday-Sunday</h3>
-                        <div className="home-open-day">
+                        <div class="home-open-day">
+                            <h3>Monday-Sunday</h3>
                             <p>Launch : Mon-Sun : 11:00am-02:00pm</p>
-                            <p>Dinner : sunday : 04:00pm-08:00pm</p>
-                            <p>04:00pm-09:00pm</p>
+                            <p>Dinner : Sunday : 04:00pm-08:00pm</p>
+                            <p>Late : 04:00pm-09:00pm</p>
                         </div>
-                        <div className="home-open-btns">
-                            <button className='home-open-btns-order'>Order now</button>
-                            <button className='home-open-btns-reservation'>Reservation</button>
+                        <div class="home-open-btns">
+                            <button class="home-open-btn home-open-btn-orange">
+                                <span>Order now</span>
+                            </button>
+                            <button class="home-open-btn home-open-btn-white">
+                                <span>Reservation</span>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
+
 
             <Footer />
 
