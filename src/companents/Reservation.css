@@ -301,57 +301,6 @@
     gap: 10px;
 }
 
-.confres-circle {
-    width: 106px;
-    height: 96.19px;
-    position: absolute;
-    border-radius: 50%;
-    background: rgb(56, 255, 126);
-    opacity: 0.1px;
-    top: 309px;
-    left: 951px;
-
-}
-
-.confres-circle2 {
-    position: absolute;
-    border-radius: 50%;
-    background: rgb(56, 255, 126);
-    opacity: 0.1px;
-    width: 70px;
-    height: 63.21px;
-    top: 400px;
-    left: 1156px;
-    gap: 0px;
-    opacity: 0.1px;
-
-}
-
-.confres-circle3 {
-    position: absolute;
-    border-radius: 50%;
-    background: rgb(56, 255, 126);
-    width: 20px;
-    height: 18px;
-    top: 453px;
-    left: 607px;
-    gap: 0px;
-    opacity: 0.1px;
-
-}
-
-.confres-circle4 {
-    position: absolute;
-    border-radius: 50%;
-    background: rgb(56, 255, 126);
-    width: 40px;
-    height: 38px;
-    top: 290px;
-    left: 160px;
-    gap: 0px;
-    opacity: 0.1px;
-}
-
 .header-confress {
     width: 90%;
 }
@@ -506,57 +455,6 @@
 .calres-are-in h1 {
     font-size: 40px;
     max-width: 650px;
-}
-
-.calres-circle {
-    width: 106px;
-    height: 96.19px;
-    position: absolute;
-    border-radius: 50%;
-    background: rgb(255, 154, 39);
-    opacity: 0.1px;
-    top: 309px;
-    left: 951px;
-
-}
-
-.calres-circle2 {
-    position: absolute;
-    border-radius: 50%;
-    background: rgb(255, 154, 39);
-    opacity: 0.1px;
-    width: 70px;
-    height: 63.21px;
-    top: 400px;
-    left: 1156px;
-    gap: 0px;
-    opacity: 0.1px;
-
-}
-
-.calres-circle3 {
-    position: absolute;
-    border-radius: 50%;
-    background: rgb(255, 154, 39);
-    width: 20px;
-    height: 18px;
-    top: 453px;
-    left: 607px;
-    gap: 0px;
-    opacity: 0.1px;
-
-}
-
-.calres-circle4 {
-    position: absolute;
-    border-radius: 50%;
-    background: rgb(255, 154, 39);
-    width: 40px;
-    height: 38px;
-    top: 290px;
-    left: 160px;
-    gap: 0px;
-    opacity: 0.1px;
 }
 
 .calres-wrap-in {

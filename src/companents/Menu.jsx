@@ -11,7 +11,6 @@ function Menu() {
         <div className="menu">
             <h1 className='menu-h1'>Menu</h1>
             <MenuItems itemsPerPage={6} />
-
         </div>
         <Footer/>
     </div>

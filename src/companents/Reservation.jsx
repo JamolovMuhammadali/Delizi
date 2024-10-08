@@ -66,7 +66,7 @@ function Reservation() {
     setConfres(true)
   }
 
-  function CancelRes(){
+  function CancelRes() {
     setCancelRes(false)
     setReshidden(false);
     setConfres(false)
@@ -255,10 +255,6 @@ function Reservation() {
                   <p>Booking ID : #123456</p>
                 </div>
 
-                <div className="confres-circle"></div>
-                <div className="confres-circle2"></div>
-                <div className="confres-circle3"></div>
-                <div className="confres-circle4"></div>
               </div>
             </div>
 
@@ -352,11 +348,6 @@ function Reservation() {
                 <div className="confres-succes-id">
                   <MdOutlineDateRange />
                   <p>Booking ID : #123456</p>
-                  <div className="calres-circle"></div>
-                  <div className="calres-circle2"></div>
-                  <div className="calres-circle3"></div>
-                  <div className="calres-circle4"></div>
-
                 </div>
               </div>
             </div>
@@ -386,7 +377,7 @@ function Reservation() {
                 </div>
               </div>
             </div>
-            
+
             <div className="wrap-calres-cancel">
               <button onClick={CancelRes} className='calres-cancel'>Cancel reservation</button>
             </div>

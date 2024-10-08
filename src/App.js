@@ -7,6 +7,7 @@ import Menu from './companents/Menu'
 import ResetPassword from './companents/ResetPassword';
 import AboutUs from './companents/AboutUs';
 import Reservation from './companents/Reservation';
+import Contact from './companents/Contact';
 
 
 function App() {
@@ -22,6 +23,8 @@ function App() {
           <Route path='/resetPassword' element={<ResetPassword />} />
           <Route path='/About' element={<AboutUs />} />
           <Route path='/Reservation' element={<Reservation />} />
+          <Route path='/Contact' element={<Contact />} />
+
         </Routes>
 
       </BrowserRouter>
