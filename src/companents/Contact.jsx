@@ -4,6 +4,7 @@ import Footer from './Footer'
 import '../companents/Contact.css'
 import Alert from './Alert'
 import { useNavigate } from "react-router-dom";
+import contactImg from '../assets/contactmodal.png'
 
 
 
@@ -22,8 +23,8 @@ function Contact() {
         message: "",
     });
 
-    const telegramBotToken = '7166400728:AAENydLWNB8DEtbhVjT9X3QJj3NOxtNnNM4'; // Replace with your bot token
-    const chatId = '5724981036'; // Replace with your chat ID
+    const telegramBotToken = '7166400728:AAENydLWNB8DEtbhVjT9X3QJj3NOxtNnNM4';
+    const chatId = '5724981036';
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -32,8 +33,7 @@ function Contact() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        setShowSuccessAlert(true); // Trigger success alert
-        // Send form data to the Telegram bot
+        setShowSuccessAlert(true);
         const message = `
           New Contact Form Submission:
           - First Name: ${formData.firstName}
@@ -58,7 +58,7 @@ function Contact() {
                 if (data.ok) {
                     console.log("Message sent to Telegram bot");
 
-                    // Reset the form
+                    // Reset the form 
                     setFormData({
                         firstName: "",
                         lastName: "",
@@ -137,6 +137,10 @@ function Contact() {
                     <button type="submit" className="contact-submit-btn">Submit</button>
                 </form>
 
+            </div>
+
+            <div className="contact-map">
+                <iframe className='contact-map-iframe' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d386311.06970484206!2d71.9763512!3d40.84871115000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bca0f4b7ee00d7%3A0xdfc5299b5374dd69!2z0JHQsNC70YvQutGH0LjQvdGB0LrQuNC5INGA0LDQudC-0L0sINCQ0L3QtNC40LbQsNC90YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsINCj0LfQsdC10LrQuNGB0YLQsNC9!5e0!3m2!1sru!2s!4v1729076953615!5m2!1sru!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
             <Footer />

@@ -30,15 +30,18 @@ function Header() {
                 <Link to='/OrderOnline' onClick={() => setMenuOpen(false)}>Order online</Link>
                 <Link to='/Reservation' onClick={() => setMenuOpen(false)}>Reservation</Link>
                 <Link to='/Contact' onClick={() => setMenuOpen(false)}>Contact us</Link>
+                <Link to='/Contact' onClick={() => setMenuOpen(false)}>Contact us</Link>
             </div>
 
             <div className="header-counter-button">
-                <div className="header-counter">
-                    <MdOutlineShoppingCart />
-                    <div className="header-counter-num">
-                        <sup>{cartItems}</sup>
+                <Link to='/Cart' onClick={() => setMenuOpen(false)}>
+                    <div className="header-counter">
+                        <MdOutlineShoppingCart />
+                        <div className="header-counter-num">
+                            <sup>{cartItems}</sup>
+                        </div>
                     </div>
-                </div>
+                </Link>
 
                 <Link to='/Login'>
                     <button>Login</button>

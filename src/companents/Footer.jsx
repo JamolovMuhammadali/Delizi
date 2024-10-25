@@ -18,9 +18,12 @@ function Footer() {
                         <div className="footer-delizi-socials">
                             <FaTwitter />
                         </div>
+                        <a href="https://www.instagram.com/mukhamadali.001/">
                         <div className="footer-delizi-socials">
                             <FaInstagram />
                         </div>
+                        </a>
+                        
                         <div className="footer-delizi-socials">
                             <FaFacebookF />
                         </div>

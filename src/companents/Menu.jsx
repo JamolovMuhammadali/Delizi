@@ -4,7 +4,7 @@ import Footer from '../companents/Footer'
 import MenuItems from './MenuItems'
 import '../companents/Menu.css'
 
-function Menu() {
+function Menu(addItemToCart) {
   return (
     <div>
         <Header/>
