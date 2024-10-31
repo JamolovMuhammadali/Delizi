@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import './MenuItems.css';
-import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
-
-// Replace these imports with actual image paths
+import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import Spaghetti from '../assets/Spaghetti.png';
 import Gnocchi from '../assets/Gnocchi.png';
 import Rovioli from '../assets/Rovioli.png';
@@ -11,18 +9,15 @@ import Risoto from '../assets/Risoto.png';
 import SplitzaSignature from '../assets/SplitzaSignature.png';
 
 function MenuItems({ itemsPerPage = 6, addItemToCart }) {
-  // Menu data
   const data = [
     { id: 1, name: 'Spaghetti', price: '$12.05', message: 'Delicious spaghetti with tomato sauce.', image: Spaghetti },
     { id: 2, name: 'Gnocchi', price: '$12.05', message: 'Tender gnocchi with butter sauce.', image: Gnocchi },
-    { id: 3, name: 'Rovioli', price: '$12.05', message: 'Homemade rovioli with ricotta.', image: Rovioli },
-    { id: 4, name: 'Penne Alla Vodak', price: '$12.05', message: 'Penne pasta with vodka sauce.', image: PenneAllaVodak },
-    { id: 5, name: 'Risoto', price: '$12.05', message: 'Creamy mushroom risotto.', image: Risoto },
+    { id: 3, name: 'Rovioli', price: '$12.05', message: 'Homemade ravioli with ricotta.', image: Rovioli },
+    { id: 4, name: 'Penne Alla Vodka', price: '$12.05', message: 'Penne pasta with vodka sauce.', image: PenneAllaVodak },
+    { id: 5, name: 'Risotto', price: '$12.05', message: 'Creamy mushroom risotto.', image: Risoto },
     { id: 6, name: 'Splitza Signature', price: '$12.05', message: 'Special pizza with unique toppings.', image: SplitzaSignature },
-    // Add more items as needed
   ];
 
-  // Pagination logic
   const [currentPage, setCurrentPage] = useState(1);
   const totalItems = data.length;
   const totalPages = Math.ceil(totalItems / itemsPerPage);
@@ -31,15 +26,11 @@ function MenuItems({ itemsPerPage = 6, addItemToCart }) {
   const currentData = data.slice(startIndex, startIndex + itemsPerPage);
 
   const handleNext = () => {
-    if (currentPage < totalPages) {
-      setCurrentPage(currentPage + 1);
-    }
+    if (currentPage < totalPages) setCurrentPage(currentPage + 1);
   };
 
   const handlePrevious = () => {
-    if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
-    }
+    if (currentPage > 1) setCurrentPage(currentPage - 1);
   };
 
   return (

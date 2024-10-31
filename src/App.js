@@ -1,38 +1,36 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import Home from './companents/Home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './companents/Home';
 import Login from './companents/Login';
 import Signup from './companents/Signup';
-import Menu from './companents/Menu';
+import MenuItems from './companents/MenuItems';
 import ResetPassword from './companents/ResetPassword';
 import AboutUs from './companents/AboutUs';
 import Reservation from './companents/Reservation';
 import Contact from './companents/Contact';
-import Orderonline from './companents/Orderonline';
+import OrderOnline from './companents/Orderonline';
 import Cart from './companents/Cart';
-import MenuItems from './companents/MenuItems';
+import Checkout from './companents/Checkout';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
 
-  // Load cart from localStorage on component mount
+  // Load cart from localStorage
   useEffect(() => {
     const savedCartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
     setCartItems(savedCartItems);
   }, []);
 
-  // Save cart to localStorage whenever cartItems changes
+  // Save cart to localStorage
   useEffect(() => {
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
   }, [cartItems]);
 
-  // Add item to cart
   const addItemToCart = (item) => {
     setCartItems([...cartItems, item]);
   };
 
-  // Remove item from cart
   const removeItemFromCart = (index) => {
     const updatedCart = [
       ...cartItems.slice(0, index),
@@ -47,15 +45,15 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />
-          <Route path='/Signup' element={<Signup />} />
-          <Route path='/Menu' element={<Menu addItemToCart={addItemToCart} />} />
+          <Route path='/signup' element={<Signup />} />
+          <Route path='/menu' element={<MenuItems addItemToCart={addItemToCart} />} />
           <Route path='/resetPassword' element={<ResetPassword />} />
-          <Route path='/About' element={<AboutUs />} />
-          <Route path='/Reservation' element={<Reservation />} />
-          <Route path='/Contact' element={<Contact />} />
-          <Route path='/Orderonline' element={<Orderonline />} />
-          <Route path='/Cart' element={<Cart removeItemFromCart={removeItemFromCart} cartItems={cartItems} />} />
-          <Route path='/MenuItems' element={<MenuItems addItemToCart={addItemToCart} />} />
+          <Route path='/about' element={<AboutUs />} />
+          <Route path='/reservation' element={<Reservation />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/orderonline' element={<OrderOnline />} />
+          <Route path='/cart' element={<Cart cartItems={cartItems} removeItemFromCart={removeItemFromCart} />} />
+          <Route path='/checkout' element={<Checkout cartItems={cartItems} removeItemFromCart={removeItemFromCart} />} />
         </Routes>
       </BrowserRouter>
     </div>
@@ -63,4 +61,3 @@ function App() {
 }
 
 export default App;
-    

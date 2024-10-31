@@ -1,10 +1,8 @@
 import React from 'react';
-import Header from './Header';
 
 function Cart({ cartItems, removeItemFromCart }) {
   return (
     <div className="cart-container">
-        <Header/>
       <h2>Your Cart</h2>
       {cartItems.length === 0 ? (
         <p>Your cart is empty</p>
@@ -12,8 +10,16 @@ function Cart({ cartItems, removeItemFromCart }) {
         <ul>
           {cartItems.map((item, index) => (
             <li key={index}>
-              {item.name} - {item.price}
-              <button onClick={() => removeItemFromCart(index)}>Remove</button>
+              <span>{item.name} - {item.price}</span>
+              <button 
+                onClick={() => {
+                  if (window.confirm('Are you sure you want to remove this item?')) {
+                    removeItemFromCart(index);
+                  }
+                }}
+              >
+                Remove
+              </button>
             </li>
           ))}
         </ul>

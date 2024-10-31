@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
-// import '../components/Header.css';
 import '../companents/Header.css'
 import { MdOutlineShoppingCart } from 'react-icons/md';
 import { Link } from 'react-router-dom';
-// import Reservation from '../components/Reservation';
-import Reservation from '../companents/Reservation';
 
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
-    const cartItems = 3; // Example cart items count
+    const cartItems = 3;
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -25,12 +22,11 @@ function Header() {
 
             <div className={`header-links ${menuOpen ? 'show' : ''}`}>
                 <Link to='/' onClick={() => setMenuOpen(false)}>Home</Link>
-                <Link to='/Menu' onClick={() => setMenuOpen(false)}>Menu</Link>
                 <Link to='/About' onClick={() => setMenuOpen(false)}>About us</Link>
                 <Link to='/OrderOnline' onClick={() => setMenuOpen(false)}>Order online</Link>
                 <Link to='/Reservation' onClick={() => setMenuOpen(false)}>Reservation</Link>
                 <Link to='/Contact' onClick={() => setMenuOpen(false)}>Contact us</Link>
-                <Link to='/Contact' onClick={() => setMenuOpen(false)}>Contact us</Link>
+                <Link to='/checkout' onClick={() => setMenuOpen(false)}>Checkout</Link>
             </div>
 
             <div className="header-counter-button">

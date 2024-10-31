@@ -8,10 +8,10 @@ import MenuItems from './MenuItems'
 function Orderonline() {
     return (
         <div className="order">
-            <Header/>
+            <Header />
             <h1 className='order-title'>Menu</h1>
             <MenuItems itemsPerPage={6} />
-            <Footer/>
+            <Footer />
         </div>
     )
 }
