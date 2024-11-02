@@ -14,29 +14,12 @@
     color: #311F09;
 }
 
-.checkout-back {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #311F09;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 25px;
-    color: white;
-    transition: all 0.5s;
+.checkout-adress{
+    padding: 30px 0 20px;
 }
 
-.checkout-back:hover {
-    font-size: 27px
-}
-
-.checkout-adress {
-    margin: 50px 0;
-}
-
-.checkout-adress h2 {
-    margin-bottom: 10px;
+.checkout-adress h2{
+    margin: 20px 0;
 }
 
 .checkout-adress-form {
@@ -61,7 +44,6 @@
 }
 
 .checkout-adress-form button {
-    width: 10%;
     cursor: pointer;
     background-color: #749FE0;
     color: white;
@@ -72,10 +54,65 @@
     background-color: #6593d7;
 }
 
-.order-form {
-    /* max-width: 400px; */
+.checkout-back {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #311F09;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: white;
+    transition: all 0.5s;
+}
+
+.checkout-back:hover {
+    font-size: 27px;
+}
+
+.checkout-address {
+    margin: 50px 0;
+}
+
+.checkout-address h2 {
+    margin-bottom: 10px;
+}
+
+.checkout-address-form {
     width: 100%;
-    /* margin: auto; */
+    display: flex;
+    gap: 10px;
+}
+
+.checkout-address-form button,
+.checkout-address-form input {
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    transition: all 0.5s;
+}
+
+.checkout-address-form input {
+    width: 90%;
+    background-color: #D0CCC7;
+    border-radius: 8px;
+}
+
+.checkout-address-form button {
+    width: 10%;
+    cursor: pointer;
+    background-color: #749FE0;
+    color: white;
+    border-radius: 20px;
+}
+
+.checkout-address-form button:hover {
+    background-color: #6593d7;
+}
+
+.order-form {
+    width: 100%;
     font-family: Arial, sans-serif;
 }
 
@@ -86,20 +123,19 @@
 }
 
 .form-row {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 10px;
     margin-bottom: 10px;
+    width: 100%;
 }
 
 .form-input {
+    width: 100%;
     flex: 1;
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
-}
-
-.form-input,
-.form-textarea{
     background-color: #D0CCC7;
     outline: none;
 }
@@ -111,6 +147,7 @@
     border-radius: 5px;
     margin-bottom: 10px;
     min-height: 150px;
+    background-color: #D0CCC7;
 }
 
 .radio-group {
@@ -133,14 +170,10 @@
     margin-bottom: 20px;
 }
 
-.grid label{
+.grid label {
     background-color: #D0CCC7;
     padding: 20px;
     border-radius: 8px;
-}
-
-.grid input{
-    color: #3FA72F;
 }
 
 .checkbox-container {
@@ -155,7 +188,7 @@
     color: #333;
 }
 
-.order-form-wrap-btn{
+.order-form-wrap-btn {
     width: 100%;
     display: flex;
     align-items: center;
@@ -174,4 +207,66 @@
     cursor: pointer;
     margin: 0 auto;
     max-width: 400px;
+}
+
+/* Responsive Design */
+@media (max-width: 867px) {
+    .checkout h1 {
+        font-size: 40px;
+    }
+
+    .checkout-back {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .checkout-address-form input {
+        width: 85%;
+    }
+
+    .checkout-address-form button {
+        width: 15%;
+    }
+}
+
+@media (max-width: 567px) {
+    .checkout h1 {
+        font-size: 24px;
+    }
+
+    .checkout-back {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
+
+    .checkout-back:hover {
+        font-size: 18px;
+    }
+
+    .checkout-address h2,
+    .section-title {
+        font-size: 16px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .form-input,
+    .form-textarea,
+    .submit-button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .checkout-address-form input,
+    .checkout-address-form button {
+        padding: 10px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
 }

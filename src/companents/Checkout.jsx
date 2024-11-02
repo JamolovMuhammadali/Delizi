@@ -20,7 +20,7 @@ function checkout() {
         <div className="checkout-adress">
           <h2>Shipping address</h2>
           <form className='checkout-adress-form'>
-            <input type="text" />
+            <input placeholder='Your Adress...' type="text" />
             <button>Change</button>
           </form>
         </div>
